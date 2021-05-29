@@ -1,0 +1,109 @@
+2021-05-29 21:06:12,798 - ERROR - weibo.py[:675] - 'NoneType' object has no attribute 'xpath'
+Traceback (most recent call last):
+  File "weibo.py", line 670, in get_one_weibo
+    weibo = self.parse_weibo(weibo_info)
+  File "weibo.py", line 569, in parse_weibo
+    weibo['text'] = etree.HTML(text_body).xpath('string(.)')
+AttributeError: 'NoneType' object has no attribute 'xpath'
+2021-05-29 21:28:36,378 - ERROR - weibo.py[:675] - 'NoneType' object has no attribute 'xpath'
+Traceback (most recent call last):
+  File "weibo.py", line 670, in get_one_weibo
+    weibo = self.parse_weibo(weibo_info)
+  File "weibo.py", line 569, in parse_weibo
+    weibo['text'] = etree.HTML(text_body).xpath('string(.)')
+AttributeError: 'NoneType' object has no attribute 'xpath'
+2021-05-29 21:29:05,379 - ERROR - weibo.py[:675] - 'NoneType' object has no attribute 'xpath'
+Traceback (most recent call last):
+  File "weibo.py", line 670, in get_one_weibo
+    weibo = self.parse_weibo(weibo_info)
+  File "weibo.py", line 569, in parse_weibo
+    weibo['text'] = etree.HTML(text_body).xpath('string(.)')
+AttributeError: 'NoneType' object has no attribute 'xpath'
+2021-05-29 21:29:11,599 - ERROR - weibo.py[:675] - 'NoneType' object has no attribute 'xpath'
+Traceback (most recent call last):
+  File "weibo.py", line 670, in get_one_weibo
+    weibo = self.parse_weibo(weibo_info)
+  File "weibo.py", line 569, in parse_weibo
+    weibo['text'] = etree.HTML(text_body).xpath('string(.)')
+AttributeError: 'NoneType' object has no attribute 'xpath'
+2021-05-29 22:45:51,524 - ERROR - weibo.py[:730] - HTTPSConnectionPool(host='m.weibo.cn', port=443): Max retries exceeded with url: /api/container/getIndex?containerid=1076035484717059&page=18 (Caused by SSLError(SSLError("bad handshake: Error([('rsa routines', 'int_rsa_verify', 'wrong signature length'), ('SSL routines', 'tls_process_key_exchange', 'bad signature')])")))
+Traceback (most recent call last):
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\contrib\pyopenssl.py", line 488, in wrap_socket
+    cnx.do_handshake()
+  File "C:\Users\liuch\anaconda3\lib\site-packages\OpenSSL\SSL.py", line 1934, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\OpenSSL\SSL.py", line 1671, in _raise_ssl_error
+    _raise_current_error()
+  File "C:\Users\liuch\anaconda3\lib\site-packages\OpenSSL\_util.py", line 54, in exception_from_error_queue
+    raise exception_type(errors)
+OpenSSL.SSL.Error: [('rsa routines', 'int_rsa_verify', 'wrong signature length'), ('SSL routines', 'tls_process_key_exchange', 'bad signature')]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 978, in _validate_conn
+    conn.connect()
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\connection.py", line 362, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\util\ssl_.py", line 386, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\contrib\pyopenssl.py", line 494, in wrap_socket
+    raise ssl.SSLError("bad handshake: %r" % e)
+ssl.SSLError: ("bad handshake: Error([('rsa routines', 'int_rsa_verify', 'wrong signature length'), ('SSL routines', 'tls_process_key_exchange', 'bad signature')])",)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\util\retry.py", line 446, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='m.weibo.cn', port=443): Max retries exceeded with url: /api/container/getIndex?containerid=1076035484717059&page=18 (Caused by SSLError(SSLError("bad handshake: Error([('rsa routines', 'int_rsa_verify', 'wrong signature length'), ('SSL routines', 'tls_process_key_exchange', 'bad signature')])")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "weibo.py", line 689, in get_one_page
+    js = self.get_weibo_json(page)
+  File "weibo.py", line 167, in get_weibo_json
+    js = self.get_json(params)
+  File "weibo.py", line 151, in get_json
+    r = requests.get(url,
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='m.weibo.cn', port=443): Max retries exceeded with url: /api/container/getIndex?containerid=1076035484717059&page=18 (Caused by SSLError(SSLError("bad handshake: Error([('rsa routines', 'int_rsa_verify', 'wrong signature length'), ('SSL routines', 'tls_process_key_exchange', 'bad signature')])")))
+2021-05-29 23:00:32,489 - ERROR - weibo.py[:675] - 'NoneType' object has no attribute 'xpath'
+Traceback (most recent call last):
+  File "weibo.py", line 670, in get_one_weibo
+    weibo = self.parse_weibo(weibo_info)
+  File "weibo.py", line 569, in parse_weibo
+    weibo['text'] = etree.HTML(text_body).xpath('string(.)')
+AttributeError: 'NoneType' object has no attribute 'xpath'
+2021-05-29 23:40:04,541 - ERROR - weibo.py[:675] - 'NoneType' object has no attribute 'xpath'
+Traceback (most recent call last):
+  File "weibo.py", line 670, in get_one_weibo
+    weibo = self.parse_weibo(weibo_info)
+  File "weibo.py", line 569, in parse_weibo
+    weibo['text'] = etree.HTML(text_body).xpath('string(.)')
+AttributeError: 'NoneType' object has no attribute 'xpath'
+2021-05-29 23:50:33,602 - ERROR - weibo.py[:675] - 'NoneType' object has no attribute 'xpath'
+Traceback (most recent call last):
+  File "weibo.py", line 670, in get_one_weibo
+    weibo = self.parse_weibo(weibo_info)
+  File "weibo.py", line 569, in parse_weibo
+    weibo['text'] = etree.HTML(text_body).xpath('string(.)')
+AttributeError: 'NoneType' object has no attribute 'xpath'

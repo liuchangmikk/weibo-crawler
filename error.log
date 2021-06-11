@@ -418,3 +418,68 @@ Traceback (most recent call last):
   File "weibo.py", line 569, in parse_weibo
     weibo['text'] = etree.HTML(text_body).xpath('string(.)')
 AttributeError: 'NoneType' object has no attribute 'xpath'
+2021-06-11 22:10:57,597 - ERROR - weibo.py[:1111] - 'id'
+Traceback (most recent call last):
+  File "weibo.py", line 1079, in get_pages
+    self.print_user_info()
+  File "weibo.py", line 590, in print_user_info
+    logger.info(u'用户id：%s', self.user['id'])
+KeyError: 'id'
+2021-06-11 22:13:23,529 - ERROR - weibo.py[:393] - HTTPSConnectionPool(host='wx4.sinaimg.cn', port=443): Read timed out.
+Traceback (most recent call last):
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\contrib\pyopenssl.py", line 313, in recv_into
+    return self.connection.recv_into(*args, **kwargs)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\OpenSSL\SSL.py", line 1840, in recv_into
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\OpenSSL\SSL.py", line 1646, in _raise_ssl_error
+    raise WantReadError()
+OpenSSL.SSL.WantReadError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\response.py", line 436, in _error_catcher
+    yield
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\response.py", line 518, in read
+    data = self._fp.read(amt) if not fp_closed else b""
+  File "C:\Users\liuch\anaconda3\lib\http\client.py", line 458, in read
+    n = self.readinto(b)
+  File "C:\Users\liuch\anaconda3\lib\http\client.py", line 502, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\liuch\anaconda3\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\contrib\pyopenssl.py", line 326, in recv_into
+    raise timeout("The read operation timed out")
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\models.py", line 750, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\response.py", line 575, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\response.py", line 540, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\liuch\anaconda3\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\urllib3\response.py", line 441, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='wx4.sinaimg.cn', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "weibo.py", line 375, in download_one_file
+    downloaded = s.get(url,
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\sessions.py", line 686, in send
+    r.content
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\models.py", line 828, in content
+    self._content = b''.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b''
+  File "C:\Users\liuch\anaconda3\lib\site-packages\requests\models.py", line 757, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='wx4.sinaimg.cn', port=443): Read timed out.

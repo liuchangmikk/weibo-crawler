@@ -483,3 +483,31 @@ Traceback (most recent call last):
   File "C:\Users\liuch\anaconda3\lib\site-packages\requests\models.py", line 757, in generate
     raise ConnectionError(e)
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='wx4.sinaimg.cn', port=443): Read timed out.
+2021-06-12 16:45:36,692 - ERROR - weibo.py[:1111] - 'id'
+Traceback (most recent call last):
+  File "weibo.py", line 1079, in get_pages
+    self.print_user_info()
+  File "weibo.py", line 590, in print_user_info
+    logger.info(u'用户id：%s', self.user['id'])
+KeyError: 'id'
+2021-06-12 16:47:38,700 - ERROR - weibo.py[:1111] - 'id'
+Traceback (most recent call last):
+  File "weibo.py", line 1079, in get_pages
+    self.print_user_info()
+  File "weibo.py", line 590, in print_user_info
+    logger.info(u'用户id：%s', self.user['id'])
+KeyError: 'id'
+2021-06-12 17:10:06,580 - ERROR - weibo.py[:675] - 'NoneType' object has no attribute 'xpath'
+Traceback (most recent call last):
+  File "weibo.py", line 670, in get_one_weibo
+    weibo = self.parse_weibo(weibo_info)
+  File "weibo.py", line 569, in parse_weibo
+    weibo['text'] = etree.HTML(text_body).xpath('string(.)')
+AttributeError: 'NoneType' object has no attribute 'xpath'
+2021-06-14 11:42:41,811 - ERROR - weibo.py[:675] - 'NoneType' object has no attribute 'xpath'
+Traceback (most recent call last):
+  File "weibo.py", line 670, in get_one_weibo
+    weibo = self.parse_weibo(weibo_info)
+  File "weibo.py", line 569, in parse_weibo
+    weibo['text'] = etree.HTML(text_body).xpath('string(.)')
+AttributeError: 'NoneType' object has no attribute 'xpath'

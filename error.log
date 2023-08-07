@@ -511,3 +511,124 @@ Traceback (most recent call last):
   File "weibo.py", line 569, in parse_weibo
     weibo['text'] = etree.HTML(text_body).xpath('string(.)')
 AttributeError: 'NoneType' object has no attribute 'xpath'
+2023-08-03 20:30:27,687 - ERROR - weibo.py[:675] - Extra data: line 192 column 2 (char 10222)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 656, in get_one_weibo
+    retweet = self.get_long_weibo(retweet_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 192 column 2 (char 10222)
+2023-08-03 20:30:27,841 - ERROR - weibo.py[:675] - Extra data: line 121 column 2 (char 4517)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 666, in get_one_weibo
+    weibo = self.get_long_weibo(weibo_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 121 column 2 (char 4517)
+2023-08-03 20:30:28,114 - ERROR - weibo.py[:675] - Extra data: line 108 column 2 (char 3908)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 666, in get_one_weibo
+    weibo = self.get_long_weibo(weibo_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 108 column 2 (char 3908)
+2023-08-03 20:30:35,605 - ERROR - weibo.py[:675] - Extra data: line 122 column 2 (char 4865)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 666, in get_one_weibo
+    weibo = self.get_long_weibo(weibo_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 122 column 2 (char 4865)
+2023-08-03 20:30:49,344 - ERROR - weibo.py[:675] - Extra data: line 101 column 2 (char 3856)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 656, in get_one_weibo
+    retweet = self.get_long_weibo(retweet_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 101 column 2 (char 3856)
+2023-08-03 20:30:49,531 - ERROR - weibo.py[:675] - Extra data: line 110 column 2 (char 3941)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 656, in get_one_weibo
+    retweet = self.get_long_weibo(retweet_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 110 column 2 (char 3941)
+2023-08-03 20:31:02,504 - ERROR - weibo.py[:675] - Extra data: line 126 column 2 (char 21646)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 656, in get_one_weibo
+    retweet = self.get_long_weibo(retweet_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 126 column 2 (char 21646)
+2023-08-03 20:31:02,686 - ERROR - weibo.py[:675] - Extra data: line 344 column 2 (char 14315)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 666, in get_one_weibo
+    weibo = self.get_long_weibo(weibo_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 344 column 2 (char 14315)
+2023-08-03 20:31:21,421 - ERROR - weibo.py[:675] - Extra data: line 104 column 2 (char 3574)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 656, in get_one_weibo
+    retweet = self.get_long_weibo(retweet_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 104 column 2 (char 3574)
+2023-08-03 20:32:07,645 - ERROR - weibo.py[:675] - Extra data: line 139 column 2 (char 6816)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 656, in get_one_weibo
+    retweet = self.get_long_weibo(retweet_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 139 column 2 (char 6816)
+2023-08-03 20:32:07,974 - ERROR - weibo.py[:675] - Extra data: line 120 column 2 (char 4216)
+Traceback (most recent call last):
+  File "d:\2、代码\weibo-crawler\weibo.py", line 656, in get_one_weibo
+    retweet = self.get_long_weibo(retweet_id)
+  File "d:\2、代码\weibo-crawler\weibo.py", line 305, in get_long_weibo
+    js = json.loads(html, strict=False)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\liuchang09\Anaconda3\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 120 column 2 (char 4216)

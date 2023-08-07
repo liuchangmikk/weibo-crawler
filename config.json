@@ -1,7 +1,7 @@
 {
-    "user_id_list": ["1800742291"],
+    "user_id_list": ["5379886223"],
     "filter": 1,
-    "since_date": "2018-01-01",
+    "since_date": "2015-01-01",
     "start_page": 1,
     "write_mode": ["csv"],
     "original_pic_download": 1,
